@@ -1,0 +1,57 @@
+     Assembly listing for: tatata.mas
+                Assembled: Wed Jan 30 21:58:11 EST 2019
+
+         |                          / Assembly code form table 4.5
+         |                          
+         |         ORG 100           
+         |                          
+100 5000 |         INPUT             
+101 2110 |         STORE l           
+         |                          
+102 6000 |         OUTPUT            
+         |                          
+103 5000 |         INPUT             
+         |                          
+104 2111 |         STORE w           
+         |                          
+105 6000 |         OUTPUT            
+         |                          
+106 1111 |         LOAD w            
+         |                          
+107 4111 |         SUBT w            
+         |                          
+108 2111 |         STORE w           
+         |                          
+109 1112 |         LOAD a            
+         |                          
+10A 3110 |         ADD l             
+         |                          
+10B 2112 |         STORE a           
+         |                          
+10C 8000 |         SKIPCOND 000      
+         |                          
+10D 9007 |         JUMP 007          
+         |                          
+10E ?112 |         OUPUT a           
+   **** Instruction not recognized.
+         |                          
+10F 7000 |         HALT              
+         |                          
+110 0000 |  l      DEC 0             
+111 0000 |  w      DEC 0             
+112 0000 |  a      DEC 0             
+         |                          
+         |                          
+
+1 error found.  Assembly unsuccessful.
+
+         SYMBOL TABLE
+         --------------------------------------------------
+          Symbol | Defined | References 
+         --------+---------+-------------------------------
+          a      |   112   | 109, 10B, 10E
+          l      |   110   | 101, 10A
+          w      |   111   | 104, 106, 107, 108
+         --------------------------------------------------
+
+

@@ -1,0 +1,21 @@
+ORG 100
+input l
+store l
+output l
+input w
+store w
+ouput w
+load w
+subt w One
+store w
+load a
+add l
+store a
+Skipcond 00d
+Jump 007
+output a
+halt
+
+a, dec 0
+b, dec 0
+c, dec 0

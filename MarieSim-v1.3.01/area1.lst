@@ -1,0 +1,68 @@
+     Assembly listing for: area1.mas
+                Assembled: Wed Jan 30 22:16:22 EST 2019
+
+         |         ORG 100           
+         |                          
+100 5000 |         INPUT            / Input length
+         |                          
+101 2110 |         STORE l          / Store length to l
+         |                          
+102 5000 |         INPUT            / Input breadth
+         |                          
+103 2111 |         STORE b          / Store breadth to b
+         |                          
+         |                          
+         |                          
+         |                          
+         |                          
+         |                          
+104 9105 |         JUMP loop0       / If choice is 1 find perimeter
+         |                          
+         |                          
+         |                          
+105 1110 |  loop0  LOAD l           / load length
+         |                          
+106 3112 |         ADD area         / add area
+         |                          
+107 2112 |         STORE area       / Store area
+         |                          
+108 1111 |         LOAD b           / load breadth
+         |                          
+109 4113 |         SUBT one         / Decrement breadth
+         |                          
+10A 2111 |         STORE b          / store breadth
+         |                          
+10B 8400 |         SKIPCOND 400     / If breadth is 0 skip next instr
+         |                          
+10C 9105 |         JUMP loop0       / Continue loop
+         |                          
+10D 1112 |         LOAD area        / Print output
+         |                          
+10E 6000 |         OUTPUT            
+         |                          
+10F 7000 |         HALT              
+         |                          
+110 0000 |  l      DEC 0             
+         |                          
+111 0000 |  b      DEC 0             
+         |                          
+112 0000 |  area   DEC 0             
+         |                          
+113 0001 |  one    DEC 1             
+         |                          
+         |                          
+
+Assembly successful.
+
+         SYMBOL TABLE
+         --------------------------------------------------
+          Symbol | Defined | References 
+         --------+---------+-------------------------------
+          area   |   112   | 106, 107, 10D
+          b      |   111   | 103, 108, 10A
+          l      |   110   | 101, 105
+          loop0  |   105   | 104, 10C
+          one    |   113   | 109
+         --------------------------------------------------
+
+

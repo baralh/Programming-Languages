@@ -1,0 +1,96 @@
+org 100
+
+input / Input length
+
+store l / Store length to l
+
+input / Input breadth
+
+store b / Store breadth to b
+
+
+
+
+
+
+jump loop0 / If choice is 1 find perimeter
+
+
+
+loop0, load l / load length
+
+add area / add area
+
+store area / Store area
+
+load b / load breadth
+
+subt one / Decrement breadth
+
+store b / store breadth
+
+skipcond 400 / If breadth is 0 skip next instr
+
+jump loop0 / Continue loop
+
+load area / Print output
+
+output / Print output
+
+input / inputting a2 value
+
+store a2  / Store new area to a2
+
+
+
+
+loop1, load a2   / Load a2 to the AC
+
+
+subt area   / Subtract old area from new area
+
+store a2   / Storing the result to new area
+
+load c   / loading c as an count to how many times we decrement area from a2
+
+add p   / adding one to c 
+
+store c   / Storing count to c
+
+load a2   / loading new area a2 to check if it is 0
+
+skipcond 000   / Skip condition of a2 is 0
+
+jump loop1   / jump up to loop1
+
+load c   / load the calue of c to AC
+
+subt d /subtracting d from c to get the exact value
+
+output   / Store the count reasult 
+
+clear /clearing AC
+
+
+
+
+
+
+halt
+
+l, Dec 0
+
+b, Dec 0
+
+area, Dec 0
+
+one, Dec 1
+
+p, Dec 1
+
+a2, dec 0
+
+d, dec 1
+
+c, dec 0
+

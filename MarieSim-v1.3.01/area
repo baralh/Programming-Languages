@@ -1,0 +1,27 @@
+ORG 100
+
+Input 
+Store l
+'l'
+output l
+
+input w
+store w
+output w
+
+
+load w
+LOOP; subt w One
+Store w
+Load a
+Add l
+Store a
+Skipcond 00d
+END LOOP; Jump 007
+output a 
+Halt
+
+P, Dec 0
+Q, Dec 0
+R, Dec 0
+End

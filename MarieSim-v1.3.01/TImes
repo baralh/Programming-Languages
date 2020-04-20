@@ -1,0 +1,21 @@
+
+INPUT
+
+STORE x
+INPUT
+STORE y
+loop, LOAD x
+ADD multiply
+STORE multiply
+LOAD y
+SUBT one
+STORE y
+SKIPCOND 400
+JUMP loop
+LOAD multiply
+OUTPUT
+HALT
+x, dec 0
+y, dec 0
+one, Dec 1
+multiply, dec 0

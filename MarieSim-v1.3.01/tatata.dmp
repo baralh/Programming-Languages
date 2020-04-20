@@ -1,0 +1,10 @@
+Machine dump for /Users/hemanbaral/Desktop/Spring 19/CMSC 403/MarieSim-v1.3.01/tatata.mex           Mon Jan 28 15:20:38 EST 2019
+
+
+    PC:   254   MAR:   253      AC:  000C
+    IR:  7000   MBR:  000C   INPUT:  null  OUTPUT: null
+
+       Memory dump for addresses 250 through 256
+
+ 250:   1254   3255   2256   7000   0023   FFE9   000C  
+

@@ -1,0 +1,40 @@
+/ Assembly code form table 4.5
+
+org 100
+
+input l
+store l
+
+output l
+
+input w
+
+store w
+
+output w
+
+load w
+
+subt w one
+
+store w
+
+load a
+
+add l
+
+store a
+
+skipcond 000
+
+Jump 007
+
+ouput a
+
+halt
+
+l, dec 0
+w, dec 0
+a, dec 0
+
+

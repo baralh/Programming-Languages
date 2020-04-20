@@ -1,0 +1,119 @@
+     Assembly listing for: area2.mas
+                Assembled: Thu Jan 31 03:38:23 EST 2019
+
+         |         ORG 100           
+         |                          
+100 5000 |         INPUT            / Input length
+         |                          
+101 211F |         STORE l          / Store length to l
+         |                          
+102 5000 |         INPUT            / Input breadth
+         |                          
+103 2120 |         STORE b          / Store breadth to b
+         |                          
+         |                          
+         |                          
+         |                          
+         |                          
+         |                          
+104 9105 |         JUMP loop0       / If choice is 1 find perimeter
+         |                          
+         |                          
+         |                          
+105 111F |  loop0  LOAD l           / load length
+         |                          
+106 3121 |         ADD area         / add area
+         |                          
+107 2121 |         STORE area       / Store area
+         |                          
+108 1120 |         LOAD b           / load breadth
+         |                          
+109 4122 |         SUBT one         / Decrement breadth
+         |                          
+10A 2120 |         STORE b          / store breadth
+         |                          
+10B 8400 |         SKIPCOND 400     / If breadth is 0 skip next instr
+         |                          
+10C 9105 |         JUMP loop0       / Continue loop
+         |                          
+10D 1121 |         LOAD area        / Print output
+         |                          
+10E 6000 |         OUTPUT           / Print output
+         |                          
+10F 5000 |         INPUT            / inputting a2 value
+         |                          
+110 2124 |         STORE a2         / Store new area to a2
+         |                          
+         |                          
+         |                          
+         |                          
+111 1124 |  loop1  LOAD a2          / Load a2 to the AC
+         |                          
+         |                          
+112 4121 |         SUBT area        / Subtract old area from new area
+         |                          
+113 2124 |         STORE a2         / Storing the result to new area
+         |                          
+114 1126 |         LOAD c           / loading c as an count to how many times we decrement area from a2
+         |                          
+115 3123 |         ADD p            / adding one to c 
+         |                          
+116 2126 |         STORE c          / Storing count to c
+         |                          
+117 1124 |         LOAD a2          / loading new area a2 to check if it is 0
+         |                          
+118 8000 |         SKIPCOND 000     / Skip condition of a2 is 0
+         |                          
+119 9111 |         JUMP loop1       / jump up to loop1
+         |                          
+11A 1126 |         LOAD c           / load the calue of c to AC
+         |                          
+11B 4125 |         SUBT d           /subtracting d from c to get the exact value
+         |                          
+11C 6000 |         OUTPUT           / Store the count reasult 
+         |                          
+11D A000 |         CLEAR            /clearing AC
+         |                          
+         |                          
+         |                          
+         |                          
+         |                          
+         |                          
+11E 7000 |         HALT              
+         |                          
+11F 0000 |  l      DEC 0             
+         |                          
+120 0000 |  b      DEC 0             
+         |                          
+121 0000 |  area   DEC 0             
+         |                          
+122 0001 |  one    DEC 1             
+         |                          
+123 0001 |  p      DEC 1             
+         |                          
+124 0000 |  a2     DEC 0             
+         |                          
+125 0001 |  d      DEC 1             
+         |                          
+126 0000 |  c      DEC 0             
+         |                          
+
+Assembly successful.
+
+         SYMBOL TABLE
+         --------------------------------------------------
+          Symbol | Defined | References 
+         --------+---------+-------------------------------
+          a2     |   124   | 110, 111, 113, 117
+          area   |   121   | 106, 107, 10D, 112
+          b      |   120   | 103, 108, 10A
+          c      |   126   | 114, 116, 11A
+          d      |   125   | 11B
+          l      |   11F   | 101, 105
+          loop0  |   105   | 104, 10C
+          loop1  |   111   | 119
+          one    |   122   | 109
+          p      |   123   | 115
+         --------------------------------------------------
+
+

@@ -1,0 +1,50 @@
+org 100
+
+input / Input length
+
+store l / Store length to l
+
+input / Input breadth
+
+store b / Store breadth to b
+
+
+
+
+
+
+jump loop0 / If choice is 1 find perimeter
+
+
+
+loop0, load l / load length
+
+add area / add area
+
+store area / Store area
+
+load b / load breadth
+
+subt one / Decrement breadth
+
+store b / store breadth
+
+skipcond 400 / If breadth is 0 skip next instr
+
+jump loop0 / Continue loop
+
+load area / Print output
+
+output
+
+halt
+
+l, Dec 0
+
+b, Dec 0
+
+area, Dec 0
+
+one, Dec 1
+
+

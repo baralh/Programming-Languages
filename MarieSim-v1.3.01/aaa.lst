@@ -1,0 +1,45 @@
+     Assembly listing for: aaa.mas
+                Assembled: Wed Jan 30 13:37:09 EST 2019
+
+         |         ORG 100           
+         |                          
+100 5000 |         INPUT             
+101 2??? |         STORE l           
+   **** Operand undefined.
+102 6000 |         OUTPUT            
+103 5000 |         INPUT             
+104 2??? |         STORE w           
+   **** Operand undefined.
+105 6000 |         OUTPUT            
+106 1??? |         LOAD w            
+   **** Operand undefined.
+107 4??? |         SUBT w            
+   **** Operand undefined.
+108 2??? |         STORE w           
+   **** Operand undefined.
+109 1110 |         LOAD a            
+10A 3??? |         ADD l             
+   **** Operand undefined.
+10B 2110 |         STORE a           
+10C 800D |         SKIPCOND 00D      
+10D 9007 |         JUMP 007          
+10E 6000 |         OUTPUT            
+10F 7000 |         HALT              
+         |                          
+110 0000 |  a      DEC 0             
+111 0000 |  b      DEC 0             
+112 0000 |  c      DEC 0             
+         |         END               
+
+6 errors found.  Assembly unsuccessful.
+
+         SYMBOL TABLE
+         --------------------------------------------------
+          Symbol | Defined | References 
+         --------+---------+-------------------------------
+          a      |   110   | 109, 10B
+          b      |   111   | 
+          c      |   112   | 
+         --------------------------------------------------
+
+
